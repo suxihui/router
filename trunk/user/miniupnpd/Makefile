@@ -10,7 +10,7 @@ ENABLE_IPV6:=1
 
 IPTABLESPATH=$(ROOTDIR)/user/iptables/$(IPT_VERSION)
 
-#all: download_test extract_test
+all: download_test extract_test
 all:
 	cd $(SRC_NAME) && ./configure
 	$(MAKE) -C $(SRC_NAME) IPTABLESPATH=$(IPTABLESPATH) ENABLE_IPV6=$(ENABLE_IPV6)
