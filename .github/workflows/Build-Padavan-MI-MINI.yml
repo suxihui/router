@@ -45,6 +45,7 @@ jobs:
         ################################################################################################
         
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ALIDDNS/d' .config #删除配置项ALIDDNS
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_ZEROTIER/d' .config #删除配置项zerotier
         
         
         ######################################################################
@@ -52,6 +53,7 @@ jobs:
         ######################################################################
         
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> .config #zerotier ~1.3M
         
         #########################################################################################
         #自定义添加其它功能请参考源码configs/templates/目录下的config文件。按照上面的格式添加即可
